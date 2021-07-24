@@ -72,9 +72,9 @@ client.on("message", async message => {
   if (!command) return;
 
   if (command) {
-    if (!message.guild.me.hasPermission("ADMINISTRATOR"))
+    if (!message.guild.me.hasPermission("EMBED_LINKS"))
       return message.channel.send(
-        "I Don't Have Enough Permission To Use This Or Any Of My Commands | Require : Administrator"
+        "I Don't Have Enough Permission To Use This Or Any Of My Commands | Require : EMBED_LINKS"
       );
     command.run(client, message, args);
   }
